@@ -283,7 +283,6 @@ class TableStoreRelation(
           throw new SerDeException(s"unknown data type of primary key: ${col.getValue.getType}")
       }
     } else {
-      //throw new SerDeException(s"unknown filed name: $filedName")
       None
     }
   }
