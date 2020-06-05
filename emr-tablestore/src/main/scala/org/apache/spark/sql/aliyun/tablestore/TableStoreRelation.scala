@@ -179,9 +179,9 @@ class TableStoreRelation(
       }
     })
 
-    val putRow = new RowPutChange(tbName, new PrimaryKey(pkeyCols))
-    putRow.addColumns(attrs)
-    batch.addRowChange(putRow)
+    val updateRow = new RowUpdateChange(tbName, new PrimaryKey(pkeyCols))
+    updateRow.put(attrs)
+    batch.addRowChange(updateRow)
     batch
   }
 
